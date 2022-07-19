@@ -1,6 +1,6 @@
 package p3;
 
-public class DominioGmail implements Dominio {
+public class Outlook implements Dominio {
 
     private String dominio;
 
