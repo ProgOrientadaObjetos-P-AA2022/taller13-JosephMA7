@@ -12,6 +12,7 @@ import p2.TipoMatricula;
 public class Principal {
 
     public static void main(String[] args) {
+
         MatriculaCampamento mcamp = new MatriculaCampamento();
         mcamp.establecerMatricula();
 

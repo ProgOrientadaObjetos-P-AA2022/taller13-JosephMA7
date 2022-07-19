@@ -8,13 +8,10 @@ public class TipoMatricula {
 
     private double promedioMatriculas;
     private ArrayList<Matricula> matriculas;
-    // private MatriculaEscuela escuela;
-    // private MatriculaJardin jardin;
-    // private MatriculaMaternal maternal;
-    // private MatriculaMaternal maternal2;
 
-    public void establecerMatriculas(ArrayList<Matricula> c) {
-        matriculas = c;
+    public void establecerMatriculas(ArrayList<Matricula> m) {
+        matriculas = m;
+
     }
 
     public ArrayList<Matricula> obtenerMatriculas() {
@@ -34,15 +31,19 @@ public class TipoMatricula {
     }
 
     @Override
+
     public String toString() {
         String cadena = String.format("Lista de Matriculas\n");
         for (int i = 0; i < obtenerMatriculas().size(); i++) {
-            cadena = String.format("%s%s", cadena,
+            cadena = String.format("%s%s",
+                    cadena,
                     matriculas.get(i));
         }
-        cadena = String.format("%s\nPromedio Matriculas: %.2f",
+        cadena = String.format("%s\nPromedio Matricula: %.2f",
                 cadena,
                 promedioMatriculas);
         return cadena;
+
     }
+
 }

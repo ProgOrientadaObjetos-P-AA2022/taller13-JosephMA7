@@ -7,7 +7,7 @@ public class MatriculaCampamento extends Matricula {
     private double tarifa;
 
     @Override
-    public void establecerTarifa() {
+    public void establecerMatricula() {
         // tarifa = costo transporte + costo comida + costo instructores
         tarifa = 100.2 + 30.2 + 90.2;
     }
@@ -18,7 +18,7 @@ public class MatriculaCampamento extends Matricula {
 
     @Override
     public String toString() {
-        String cadena = String.format("Matricula Campamento -%.2f\n", tarifa);
+        String cadena = String.format("Matricula Campamento - %.2f\n", tarifa);
         return cadena;
     }
 }
