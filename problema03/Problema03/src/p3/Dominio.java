@@ -1,8 +1,8 @@
 package p3;
 
-public class Dominio {
+public interface Dominio {
 
-    public void establecerDominio(String c);
+    public void establecerDominio();
 
     public String obtenerDominio();
 }

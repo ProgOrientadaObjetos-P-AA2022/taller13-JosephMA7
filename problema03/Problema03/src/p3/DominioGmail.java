@@ -4,12 +4,10 @@ public class DominioGmail implements Dominio {
 
     private String dominio;
 
-    @Override
-    public void establecerDominio(String g) {
-        dominio = g;
+    public void establecerDominio() {
+        dominio =String.format("@gmail.com");
     }
 
-    @Override
     public String obtenerDominio() {
         return dominio;
     }

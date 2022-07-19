@@ -19,54 +19,59 @@ public class Principal {
         
          */
 
-        Estudiante e = new Estudiante();
-        e.establecerNombres("Jhandry Solorzano");
-        e.establecerUserName("jhandri_07");
+        Estudiante est = new Estudiante();
+        est.establecerNombres("Joseph Martinez");
+        est.establecerUserName("jjmartinez10");
+
+        DominioGmail domGmail = new DominioGmail();
+        domGmail.establecerDominio();
+        
+        Gobierno domGob = new Gobierno();
+        domGob.establecerDominio();
+        
+        Outlook domOut = new Outlook();
+        domOut.establecerDominio();
+        
+        Utpl domUtpl = new Utpl();
+        domUtpl.establecerDominio();
+        
+        Yahoo domYahoo = new Yahoo();
+        domYahoo.establecerDominio();
+        
+        Correo correo = new Correo();
+        correo.establecerDominio(domGmail);
+        correo.establecerUserName(est.obtenerUserName());
+
+        Correo correoGob = new Correo();
+        correoGob.establecerDominio(domGob);
+        correoGob.establecerUserName(est.obtenerUserName());
+
+        Correo correoOut = new Correo();
+        correoOut.establecerDominio(domOut);
+        correoOut.establecerUserName(est.obtenerUserName());
+
+        Correo correoUtpl = new Correo();
+        correoUtpl.establecerDominio(domUtpl);
+        correoUtpl.establecerUserName(est.obtenerUserName());
+
+        Correo correoYahoo = new Correo();
+        correoYahoo.establecerDominio(domYahoo);
+        correoYahoo.establecerUserName(est.obtenerUserName());
+
         ArrayList<Correo> lista = new ArrayList<>();
+        lista.add(correo);
+        lista.add(correoGob);
+        lista.add(correoOut);
+        lista.add(correoUtpl);
+        lista.add(correoYahoo);
 
-        DominioGmail d1 = new DominioGmail();
-        d1.establecerDominio("gmail.com");
-        Correo c = new Correo();
-        c.establecerDominio(d1);
-        c.establecerUserName(e.obtenerUserName());
-        c.establecerCorreo();
-        lista.add(c);
+        for (int i = 0; i < lista.size(); i++) {
+            lista.get(i).establecerCorreo();
+        }
 
-        Gobierno d2 = new Gobierno();
-        d2.establecerDominio("gobiernoec.gob");
-        Correo c2 = new Correo();
-        c2.establecerDominio(d2);
-        c2.establecerUserName(e.obtenerUserName());
-        c2.establecerCorreo();
-        lista.add(c2);
+        est.establecerCorreos(lista);
 
-        Outlook d3 = new Outlook();
-        d3.establecerDominio("outlook.com");
-        Correo c3 = new Correo();
-        c3.establecerDominio(d3);
-        c3.establecerUserName(e.obtenerUserName());
-        c3.establecerCorreo();
-        lista.add(c3);
-
-        Utpl d4 = new Utpl();
-        d4.establecerDominio("utpl.edu.ec");
-        Correo c4 = new Correo();
-        c4.establecerDominio(d4);
-        c4.establecerUserName(e.obtenerUserName());
-        c4.establecerCorreo();
-        lista.add(c4);
-
-        Yahoo d5 = new Yahoo();
-        d5.establecerDominio("utpl.edu.ec");
-        Correo c5 = new Correo();
-        c5.establecerDominio(d5);
-        c5.establecerUserName(e.obtenerUserName());
-        c5.establecerCorreo();
-        lista.add(c5);
-
-        e.establecerCorreos(lista);
-
-        System.out.printf("%s\n", e);
+        System.out.printf("%s\n", est);
 
     }
 

@@ -5,8 +5,8 @@ public class Gobierno implements Dominio {
     private String dominio;
 
     @Override
-    public void establecerDominio(String g) {
-        dominio = g;
+    public void establecerDominio() {
+        dominio = String.format("@gobiernoec.gob");
     }
 
     @Override
